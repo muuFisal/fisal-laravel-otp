@@ -1,7 +1,10 @@
 {
   "name": "fisal/laravel-otp",
+  "description": "Laravel OTP package with OTP type binding and attempts limiting.",
   "type": "library",
   "license": "MIT",
+  "keywords": ["laravel", "otp", "2fa", "2factor", "verification", "one-time-password"],
+  "homepage": "https://mohamed-fisal.com/",
   "authors": [
     {
       "name": "Mohamed Fisal",
@@ -10,10 +13,18 @@
       "role": "Maintainer"
     }
   ],
-  "minimum-stability": "stable",
+  "support": {
+    "issues": "https://github.com/muuFisal/fisal-laravel-otp/issues",
+    "source": "https://github.com/muuFisal/fisal-laravel-otp"
+  },
   "autoload": {
     "psr-4": {
       "Fisal\\Otp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Fisal\\Otp\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -24,6 +35,9 @@
       "aliases": {
         "Otp": "Fisal\\Otp\\Otp"
       }
+    },
+    "branch-alias": {
+      "dev-main": "1.x-dev"
     }
   },
   "require": {
@@ -32,15 +46,9 @@
     "illuminate/database": "^9.0|^10.0|^11.0",
     "nesbot/carbon": "^2.0|^3.0"
   },
-  "description": "A simple package to generate and validate OTPs (internal fork with improvements)",
   "require-dev": {
     "orchestra/testbench": "^7.0|^8.0|^9.0",
-    "phpunit/phpunit": "^9.6|^10.0"
+    "phpunit/phpunit": "^9.6|^10.0|^11.0"
   },
-  "prefer-stable": true,
-  "autoload-dev": {
-    "psr-4": {
-      "Fisal\\Otp\\Tests\\": "tests/"
-    }
-  }
+  "prefer-stable": true
 }
